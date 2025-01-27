@@ -50,6 +50,7 @@ const UserData = ({ selectedUser, onAdd, onUpdate, onReset}) => {
         <input
             type='text'
             name='name'
+            className='user-input'
             value={userData.name}
             placeholder='Name'
             onChange={handleChange}
@@ -58,14 +59,16 @@ const UserData = ({ selectedUser, onAdd, onUpdate, onReset}) => {
         <input
             type='email'
             name='email'
+            className='user-input'
             value={userData.email}
             placeholder='Email'
             onChange={handleChange}
             required
         />
         <button type='submit'>{selectedUser ? "Update User" : "Add User"}</button>
-        {selectedUser && 
-            <button type='button' onClick={onReset}>Cancel</button>}
+        {selectedUser && ( 
+            <button type='button' className='cancel' onClick={onReset}>Cancel</button>
+        )}
     </form>
   )
 }

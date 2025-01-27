@@ -2,7 +2,7 @@ import React from 'react'
 
 const UserTable = ({ users, onEdit, onDelete }) => {
   return (
-    <table border='1'>
+    <table>
       <thead>
         <tr>
           <th>ID</th>
