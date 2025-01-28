@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const UserTable = ({ users, onEdit, onDelete }) => {
   return (
@@ -18,7 +19,13 @@ const UserTable = ({ users, onEdit, onDelete }) => {
           <td>{user.name}</td>
           <td>{user.email}</td>
           <td>
-            <button onClick={() => onEdit(user)}>Edit</button>
+            <Link
+              to="/edit"
+              className="edit-btn"
+              onClick={() => onEdit(user)}
+              >
+                Edit
+            </Link>
             <button onClick={() => onDelete(user.id)}>Delete</button>
           </td>
         </tr>
